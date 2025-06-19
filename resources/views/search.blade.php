@@ -12,7 +12,6 @@
                 About {{ count($data) }} results for <span class="text-blue-300 font-medium">{{ $query }}</span>
             </div>
         @endif
-
         @forelse ($data as $item)
             <div class="p-5 bg-[rgb(48,49,52)] rounded-xl shadow-lg w-full hover:shadow-xl transition-shadow duration-200 border border-[rgb(60,64,67)]">
                 <!-- Surah info header -->
@@ -20,7 +19,9 @@
                     <div>
                         <h2 class="text-[rgb(138,180,248)] text-lg font-medium">
                             {{ $item['surah_name_roman'] }} ({{ $item['surah_name_en'] }})
-                            <span class="text-gray-400 ml-1">{{ $item['surah_no'] }}:{{ $item['ayah_no_surah'] }}</span>
+
+
+
                         </h2>
                         <div class="text-gray-400 text-sm mt-1">
                             <span class="inline-block px-2 py-0.5 bg-[rgb(60,64,67)] rounded-full mr-2 text-xs">
@@ -38,6 +39,7 @@
                 
                 <!-- English translation -->
                 <p class="text-gray-200 text-lg mb-4 leading-relaxed">{{ $item['ayah_en'] }}</p>
+                <p class="text-gray-200 text-lg mb-4 leading-relaxed">{{ $item['ayah_in'] }}</p>
                 
                 <!-- Arabic text -->
                 <div class="arabic-text text-right mb-3 py-3 border-t border-b border-[rgb(60,64,67)]">
